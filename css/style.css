@@ -1,0 +1,137 @@
+/* start global vars */
+/* start global rulez */
+:root {
+  --secondary-text-color :rgb(191, 193, 200)  ;
+  --global-text-color: #fff;
+   --main-color : rgb(39,43,48)
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    direction: ltr;
+    font-size: 14px;
+    font-family: "Comfortaa", cursive;
+  
+    background: url(../images/wraper.png) center top no-repeat, rgb(39, 43, 48) left top;
+    background-size: 1000px 200px; /* Width: 400px, Height: 200px */
+    color: var(--global-text-color);
+}
+.container {
+  width: 95%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+    text-decoration: none;
+    color:aliceblue
+}
+.bg-dark {
+ background-color: rgb(39,43,48) !important;
+}
+.bg-blue {
+    background-color: rgb(58,73,123);
+
+}
+
+/* end global vars */
+/* start loading */
+.loading {
+  /*  background-color: rgba(255, 255, 255, 0.6);*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: #272b30e3;
+    display: flex;
+
+}
+.loader {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+      
+/* end loading */
+/* start games */
+/* start nav */
+nav {
+    /* margin-inline: auto;
+    margin-top: -30px; */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+    position: fixed !important;
+    top: 183px;
+    transition: all 0.1s;
+
+    /* left: 11%; */
+}
+
+.navbar-nav .nav-link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase !important;
+    transition: color 0.5s;
+
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #09c !important;
+}
+/* end nav */
+/* start main */
+.games {
+    top:264px;
+    position: relative;
+}
+.game {
+    background: none !important;
+    background-color: transparent !important;
+    color:#fff !important
+}
+/* end main */
+/* end games */
