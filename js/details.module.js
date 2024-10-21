@@ -1,10 +1,5 @@
 export default class details {
-  
-    // constructor (cat){
-    //  this.cat = cat;
-    // }
-    async getsingleGameData(cat) {
-        const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${cat}`;
+    async getsingleGameData(id) {
         const options = {
             method: 'GET',
             headers: {
@@ -12,13 +7,15 @@ export default class details {
                 'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
             }
         };
-        
-        try {
-            const response = await fetch(url, options);
-            const result = await response.text();
-            console.log(result);
-        } catch (error) {
-            console.error(error);
-        }
+        return new Promise(async(resolve, reject) => {
+            try {
+                const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`, options);
+                const data = await response.json();
+                resolve(data);
+                //show game
+            }catch (error) {
+                reject(errors);
+            }
+          });
     }
 }

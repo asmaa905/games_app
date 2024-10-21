@@ -128,10 +128,71 @@ nav {
     top:264px;
     position: relative;
 }
+.gamee {
+  cursor: pointer;
+}
 .game {
     background: none !important;
     background-color: transparent !important;
-    color:#fff !important
+    color:#fff !important;
+    padding: 16px 16px 0 !important;
+
+    filter: grayscale(0.7);
+    transition: transform 0.5s, filter 0.5s 0.1s;
 }
+.game:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+/* .game:hover .image {
+  filter: grayscale(0%);
+} */
+.game .price.badge {
+  color: #fff !important;
+  background-color: rgb(13, 110, 253) !important;
+}
+.image{
+  position: relative;
+  filter: grayscale(75%);
+
+}
+.game  .details .card-text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.badge {
+  
+  color: #fff;
+  font-size: 11px;
+  line-height: 11px;
+}
+.price-name {
+  margin-top: 18px;
+}
+ .cat-platform {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.175);
+ }
+ .card .cat-platform .plat, .card .cat-platform .cat  {
+  background-color: #32383e;
+  color: #fff;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 700;
+ }
+ 
 /* end main */
 /* end games */
+/* start details */
+.details .details-header {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.details .badge {
+ background-color: rgb(13, 202, 240) !important;
+
+  color: #000;
+}
+
+/* end details */
